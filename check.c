@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   check.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: iarikupu <iarikupu@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/02 15:22:10 by iarikupu          #+#    #+#             */
+/*   Updated: 2022/06/02 15:22:35 by iarikupu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 int	ft_isnum(int c)
@@ -16,8 +28,8 @@ int	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
- 
-int    check_args(const char *s, t_stuff *all)
+
+int	check_args(const char *s, t_stuff *all)
 {
 	int	i;
 
@@ -37,7 +49,6 @@ int    check_args(const char *s, t_stuff *all)
 		error_exit(all, NULL);
 	return (1);
 }
-
 
 void	validate(const char *str, t_stuff *all)
 {

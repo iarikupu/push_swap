@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: iarikupu <iarikupu@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/02 15:27:32 by iarikupu          #+#    #+#             */
+/*   Updated: 2022/06/02 15:28:37 by iarikupu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
@@ -7,16 +19,16 @@
 
 typedef struct s_stuff
 {
-    int     *a;
-    int     *b;
-    int     size_a;
-    int     size_b;
-}   t_stuff;
+	int	*a;
+	int	*b;
+	int	size_a;
+	int	size_b;
+}	t_stuff;
 
 typedef struct s_check {
-	char    *joined;
-	char    **splited;
-	int     size;
+	char	*joined;
+	char	**splited;
+	int		size;
 }				t_check;
 
 typedef struct s_sort {
@@ -24,35 +36,34 @@ typedef struct s_sort {
 	int	sn;
 }				t_sort;
 
-
 void	sort_num(t_stuff *st, t_check *chk);
-void    check_rev(t_stuff *all);
-int     check_sorted(t_stuff *st);
+void	check_rev(t_stuff *all);
+int		check_sorted(t_stuff *st);
 
 //Check
-int     check_args(const char *s, t_stuff *all);
-void    validate(const char *str, t_stuff *all);
-int     ft_strlen(const char *str);
-int     ft_isnum(int c);
+int		check_args(const char *s, t_stuff *all);
+void	validate(const char *str, t_stuff *all);
+int		ft_strlen(const char *str);
+int		ft_isnum(int c);
 
 //Helper
 
-void    error_exit(t_stuff *all, t_check *chk);
-int     wordcount(char *str);
+void	error_exit(t_stuff *all, t_check *chk);
+int		wordcount(char *str);
 char	**ft_split(char *str);
-int     ps_atoi(const char *str, t_check *chk, t_stuff *all);
+int		ps_atoi(const char *str, t_check *chk, t_stuff *all);
 void	ft_exit(t_stuff *all, t_check *chk);
 
 //Get_num
 void	get_num(int argc, char **argv, t_stuff *all, t_check *chk);
 void	join_arg(int argc, char **argv, t_check *chk);
-void    extr_num(t_stuff *all, t_check *chk);
-void    check_dup(t_stuff *all, t_check *chk);
+void	extr_num(t_stuff *all, t_check *chk);
+void	check_dup(t_stuff *all, t_check *chk);
 char	*ft_strjoin(char *s1, char *s2);
 
 //Init
-void    stuff_init(t_stuff *all);
-void    check_init(t_check *check);
+void	stuff_init(t_stuff *all);
+void	check_init(t_check *check);
 void	stack_init(t_stuff *all, t_check *chk);
 void	ft_putstr_fd(char *s, int fd);
 
@@ -72,7 +83,7 @@ void	ft_ss(t_stuff *st);
 //Sort_helper
 int		find_min(t_stuff *all);
 int		find_max(t_stuff *all);
-int     get_pos(t_stuff *all, int n);
+int		get_pos(t_stuff *all, int n);
 void	best_move(t_stuff *all, int n, int i);
 void	temp_sort(t_stuff *all, t_sort *sr, int n);
 

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort_helper2.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: iarikupu <iarikupu@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/02 15:29:47 by iarikupu          #+#    #+#             */
+/*   Updated: 2022/06/02 15:29:53 by iarikupu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 int	closest_chunk(t_stuff *all, t_sort *sr)
@@ -11,7 +23,7 @@ int	closest_chunk(t_stuff *all, t_sort *sr)
 	return (all->a[i]);
 }
 
-int in_chunk(t_stuff *all, t_sort *sr)
+int	in_chunk(t_stuff *all, t_sort *sr)
 {
 	int	i;
 

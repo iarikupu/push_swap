@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_num.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: iarikupu <iarikupu@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/02 15:22:42 by iarikupu          #+#    #+#             */
+/*   Updated: 2022/06/02 15:24:01 by iarikupu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 void	get_num(int argc, char **argv, t_stuff *all, t_check *chk)
@@ -7,23 +19,23 @@ void	get_num(int argc, char **argv, t_stuff *all, t_check *chk)
 	check_dup(all, chk);
 }
 
-void check_dup(t_stuff *all, t_check *chk)
+void	check_dup(t_stuff *all, t_check *chk)
 {
-    int i;
-    int j;
+	int	i;
+	int	j;
 
-    i = 0;
-    while(i < all->size_a)
-    {
-        j = 1;
-        while(j + i < all->size_a)
-        {
-			if(all->a[i] == all->a[i + j])
-                error_exit(all, chk);
+	i = 0;
+	while (i < all->size_a)
+	{
+		j = 1;
+		while (j + i < all->size_a)
+		{
+			if (all->a[i] == all->a[i + j])
+				error_exit(all, chk);
 			j++;
 		}
-        i++;
-    }
+		i++;
+	}
 }
 
 void	extr_num(t_stuff *all, t_check *chk)
@@ -33,7 +45,6 @@ void	extr_num(t_stuff *all, t_check *chk)
 
 	i = 0;
 	j = 0;
-
 	chk->splited = ft_split(chk->joined);
 	while (chk->splited[i])
 	{

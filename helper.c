@@ -1,47 +1,40 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   helper.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: iarikupu <iarikupu@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/02 15:24:10 by iarikupu          #+#    #+#             */
+/*   Updated: 2022/06/02 15:24:56 by iarikupu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 void	error_exit(t_stuff *all, t_check *chk)
 {
-    write(2, "Error\n", 7);
+	write(2, "Error\n", 7);
 	ft_exit(all, chk);
 }
 
 void	ft_exit(t_stuff *all, t_check *chk)
 {
 	if (all)
-    {   
-        free(all->a);
-        free(all->b);
-        free(all);
-    }
-    if (chk)
-    {
-        free(chk->joined);
-        while (chk->size > 0)
-            free(chk->splited[--chk->size]);
-        free(chk);
-    }
-    exit(0);
+	{
+		free(all->a);
+		free(all->b);
+		free(all);
+	}
+	if (chk)
+	{
+		free(chk->joined);
+		while (chk->size > 0)
+			free(chk->splited[--chk->size]);
+		free(chk);
+	}
+	exit(0);
 }
-// int     wordcount(char *str)
-// {
-//     int     nb;
-// 	int     i;
-
-// 	nb = 0;
-// 	i = 0;
-// 	// while (str[i])
-// 	// {
-// 	// 	// while (str[i] && str[i] == ' ')
-// 	// 		// i++;
-// 	// 	// if (str[i] && str[i] != ' ')
-// 	// 	// 	nb++;
-// 	// 	// while (str[i] && str[i] != ' ')
-// 	// 	// 	i++;
-// 	// 	i++;
-// 	// }
-// 	return (nb);
-// }
 
 int	wordcount(char *s)
 {
@@ -73,9 +66,9 @@ int	wordcount(char *s)
 char	**ft_split(char *str)
 {
 	char	**ret;
-    int     wc;
-	int     i;
-	int     j;
+	int		wc;
+	int		i;
+	int		j;
 
 	wc = wordcount(str);
 	ret = (char **)malloc((wc + 1) * sizeof(char *));
@@ -94,7 +87,6 @@ char	**ft_split(char *str)
 		while (*str && *str != ' ')
 			ret[i][j++] = *str++;
 		ret[i++][j] = 0;
-
 	}
 	ret[i] = 0;
 	return (ret);

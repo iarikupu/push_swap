@@ -42,4 +42,3 @@ void	ft_ss(t_stuff *st)
 	ft_sb(st, 0);
 	ft_putstr_fd("ss\n", 1);
 }
-

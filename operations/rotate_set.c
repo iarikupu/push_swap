@@ -14,8 +14,8 @@
 
 void	ft_rb(t_stuff *st, int pr)
 {
-	size_t	i;
-	int		*swp;
+	int	i;
+	int	*swp;
 
 	if (st->size_b > 1)
 	{
@@ -38,8 +38,8 @@ void	ft_rb(t_stuff *st, int pr)
 
 void	ft_ra(t_stuff *st, int pr)
 {
-	size_t	i;
-	int		*swp;
+	int	i;
+	int	*swp;
 
 	if (st->size_a > 1)
 	{

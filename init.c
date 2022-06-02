@@ -1,18 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   init.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: iarikupu <iarikupu@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/02 15:25:07 by iarikupu          #+#    #+#             */
+/*   Updated: 2022/06/02 15:25:26 by iarikupu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-void    stuff_init(t_stuff *all)
+void	stuff_init(t_stuff *all)
 {
-    all->a = NULL;
-    all->b = NULL;
-    all->size_a = 0;
-    all->size_b = 0; 
+	all->a = NULL;
+	all->b = NULL;
+	all->size_a = 0;
+	all->size_b = 0;
 }
 
-void    check_init(t_check *check)
+void	check_init(t_check *check)
 {
-    check->joined = (char *)malloc(1);
-    check->size = 0;
-    check->splited = NULL;  
+	check->joined = (char *)malloc(1);
+	check->size = 0;
+	check->splited = NULL;
 }
 
 void	stack_init(t_stuff *all, t_check *chk)

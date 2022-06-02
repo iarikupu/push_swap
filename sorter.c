@@ -1,55 +1,68 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sorter.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: iarikupu <iarikupu@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/02 15:30:22 by iarikupu          #+#    #+#             */
+/*   Updated: 2022/06/02 15:30:47 by iarikupu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-void sort_three(t_stuff *all)
+void	sort_three(t_stuff *all)
 {
-    if(all->a[0] < all->a[1] && all->a[0] < all->a[2] && all->a[2] < all->a[1])
-    {
-        ft_sa(all, 1);
-        ft_ra(all, 1);
-    }
-    else if(all->a[0] < all->a[1] && all->a[2] < all->a[0] && all->a[2] < all->a[1])
-    {
-        ft_ra(all, 1);
-        ft_sa(all, 1);
-    }
-    else if(all->a[0] < all->a[1] && all->a[2] < all->a[1])
-        ft_rra(all, 1);
-    else if(all->a[2] < all->a[0] && all->a[1] < all->a[0])
-        ft_ra(all, 1);
-    else
-        ft_sa(all, 1);
+	if (all->a[0] < all->a[1] && all->a[0] < all->a[2] && all->a[2] < all->a[1])
+	{
+		ft_sa(all, 1);
+		ft_ra(all, 1);
+	}
+	else if (all->a[0] < all->a[1] && all->a[2] < all->a[0]
+		&& all->a[2] < all->a[1])
+	{
+		ft_ra(all, 1);
+		ft_sa(all, 1);
+	}
+	else if (all->a[0] < all->a[1] && all->a[2] < all->a[1])
+		ft_rra(all, 1);
+	else if (all->a[2] < all->a[0] && all->a[1] < all->a[0])
+		ft_ra(all, 1);
+	else
+		ft_sa(all, 1);
 }
 
 void	sort_four(t_stuff *all)
 {
-    while (!check_sorted(all) && all->size_a == 4)
-    {
-        if (find_min(all) == all->a[3] && all->size_a == 4)
-            ft_pb(all);
-        else
-            best_move(all, find_min(all), 1);
-        if (all->size_a == 3)
-        {
-            sort_three(all);
-            ft_pa(all);
-        }
-    }
+	while (!check_sorted(all) && all->size_a == 4)
+	{
+		if (find_min(all) == all->a[3] && all->size_a == 4)
+			ft_pb(all);
+		else
+			best_move(all, find_min(all), 1);
+		if (all->size_a == 3)
+		{
+			sort_three(all);
+			ft_pa(all);
+		}
+	}
 }
 
 void	sort_five(t_stuff *all)
 {
-    while (!check_sorted(all) && all->size_a == 5)
-    {
-        if (find_min(all) == all->a[4] && all->size_a == 5)
-            ft_pb(all);
-        else
-            best_move(all, find_min(all), 1);
-        if (all->size_a == 4)
-        {
-            sort_four(all);
-            ft_pa(all);
-        }
-    }
+	while (!check_sorted(all) && all->size_a == 5)
+	{
+		if (find_min(all) == all->a[4] && all->size_a == 5)
+			ft_pb(all);
+		else
+			best_move(all, find_min(all), 1);
+		if (all->size_a == 4)
+		{
+			sort_four(all);
+			ft_pa(all);
+		}
+	}
 }
 
 void	sort_ten(t_stuff *all)
