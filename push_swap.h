@@ -33,6 +33,7 @@ typedef struct s_check {
 
 typedef struct s_sort {
 	int	*s;
+	int	n;
 	int	sn;
 }				t_sort;
 
@@ -83,7 +84,7 @@ void	ft_ss(t_stuff *st);
 //Sort_helper
 int		find_min(t_stuff *all);
 int		find_max(t_stuff *all);
-int		get_pos(t_stuff *all, int n);
+int		get_pos(t_stuff *all, int n, int j);
 void	best_move(t_stuff *all, int n, int i);
 void	temp_sort(t_stuff *all, t_sort *sr, int n);
 
@@ -91,7 +92,7 @@ void	temp_sort(t_stuff *all, t_sort *sr, int n);
 int		closest_chunk(t_stuff *all, t_sort *sr);
 int		in_chunk(t_stuff *all, t_sort *sr);
 void	push_all_b(t_stuff *all);
-void	sorted(t_stuff *all, t_sort *s);
+void	sorted(t_sort *s);
 
 //Sorter
 void	sort_three(t_stuff *all);

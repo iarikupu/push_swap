@@ -45,16 +45,16 @@ void	push_all_b(t_stuff *all)
 	}
 }
 
-void	sorted(t_stuff *all, t_sort *s)
+void	sorted(t_sort *s)
 {
 	int	i;
 	int	j;
 
-	i = -1;
-	while (++i < all->size_a)
+	i = 0;
+	while (i < s->n)
 	{
-		j = -1;
-		while (++j < all->size_a)
+		j = 0;
+		while (j < s->n)
 		{
 			if (s->s[i] < s->s[j])
 			{
@@ -62,6 +62,8 @@ void	sorted(t_stuff *all, t_sort *s)
 				s->s[j] = s->s[i] ^ s->s[j];
 				s->s[i] = s->s[i] ^ s->s[j];
 			}
+			j++;
 		}
+		i++;
 	}
 }

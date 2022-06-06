@@ -37,10 +37,8 @@ void	stack_init(t_stuff *all, t_check *chk)
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	size_t	i;
 	size_t	l;
 
-	i = 0;
 	if (!s)
 		return ;
 	l = ft_strlen(s);

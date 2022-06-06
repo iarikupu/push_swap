@@ -17,6 +17,8 @@ void	check_rev(t_stuff *all)
 	int	i;
 
 	i = 0;
+	if (all->size_a <= 2)
+		return ;
 	while (i < all->size_a - 1)
 	{
 		if (all->a[i] > all->a[i + 1])
@@ -25,7 +27,7 @@ void	check_rev(t_stuff *all)
 	}
 	i = 0;
 	while (i++ < all->size_a - 1)
-		ft_ra(all, 1);
+		ft_rra(all, 1);
 }
 
 int	check_sorted(t_stuff *all)
@@ -77,7 +79,6 @@ int	main(int argc, char **argv)
 		validate(argv[i], all);
 	check_init(chk);
 	get_num(argc, argv, all, chk);
-	check_rev(all);
 	sort_num(all, chk);
 	ft_exit(all, chk);
 }
