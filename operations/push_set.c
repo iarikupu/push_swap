@@ -12,20 +12,20 @@
 
 #include "../push_swap.h"
 
-void	ft_pa(t_stuff *st)
+void	ft_pa(t_stuff *all)
 {
-	if (st->size_b > 0)
+	if (all->size_b > 0)
 	{
-		st->a[st->size_a++] = st->b[--st->size_b];
+		all->a[all->size_a++] = all->b[--all->size_b];
 		ft_putstr_fd("pa\n", 1);
 	}
 }
 
-void	ft_pb(t_stuff *st)
+void	ft_pb(t_stuff *all)
 {
-	if (st->size_a > 0)
+	if (all->size_a > 0)
 	{
-		st->b[st->size_b++] = st->a[--st->size_a];
+		all->b[all->size_b++] = all->a[--all->size_a];
 		ft_putstr_fd("pb\n", 1);
 	}
 }

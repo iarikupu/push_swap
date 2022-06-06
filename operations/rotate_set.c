@@ -12,57 +12,57 @@
 
 #include "../push_swap.h"
 
-void	ft_rb(t_stuff *st, int pr)
+void	ft_rb(t_stuff *all, int pr)
 {
 	int	i;
 	int	*swp;
 
-	if (st->size_b > 1)
+	if (all->size_b > 1)
 	{
-		swp = (int *)malloc(st->size_b * sizeof(int));
+		swp = (int *)malloc(all->size_b * sizeof(int));
 		i = 0;
-		while (i < st->size_b)
+		while (i < all->size_b)
 		{
-			swp[i] = st->b[i];
+			swp[i] = all->b[i];
 			i++;
 		}
 		i = 0;
-		st->b[0] = swp[st->size_b - 1];
-		while (++i < st->size_b)
-			st->b[i] = swp[i - 1];
+		all->b[0] = swp[all->size_b - 1];
+		while (++i < all->size_b)
+			all->b[i] = swp[i - 1];
 		free(swp);
 		if (pr)
 			ft_putstr_fd("rb\n", 1);
 	}
 }
 
-void	ft_ra(t_stuff *st, int pr)
+void	ft_ra(t_stuff *all, int pr)
 {
 	int	i;
 	int	*swp;
 
-	if (st->size_a > 1)
+	if (all->size_a > 1)
 	{
-		swp = (int *)malloc(st->size_a * sizeof(int));
+		swp = (int *)malloc(all->size_a * sizeof(int));
 		i = 0;
-		while (i < st->size_a)
+		while (i < all->size_a)
 		{
-			swp[i] = st->a[i];
+			swp[i] = all->a[i];
 			i++;
 		}
 		i = 0;
-		st->a[0] = swp[st->size_a - 1];
-		while (++i < st->size_a)
-			st->a[i] = swp[i - 1];
+		all->a[0] = swp[all->size_a - 1];
+		while (++i < all->size_a)
+			all->a[i] = swp[i - 1];
 		free(swp);
 		if (pr)
 			ft_putstr_fd("ra\n", 1);
 	}
 }
 
-void	ft_rr(t_stuff *st)
+void	ft_rr(t_stuff *all)
 {
-	ft_ra(st, 0);
-	ft_rb(st, 0);
+	ft_ra(all, 0);
+	ft_rb(all, 0);
 	ft_putstr_fd("rr\n", 1);
 }

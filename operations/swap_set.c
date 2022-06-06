@@ -12,33 +12,33 @@
 
 #include "../push_swap.h"
 
-void	ft_sa(t_stuff *st, int pr)
+void	ft_sa(t_stuff *all, int pr)
 {
-	if (st->size_a > 1)
+	if (all->size_a > 1)
 	{
-		st->a[st->size_a - 1] = st->a[st->size_a - 1] ^ st->a[st->size_a - 2];
-		st->a[st->size_a - 2] = st->a[st->size_a - 1] ^ st->a[st->size_a - 2];
-		st->a[st->size_a - 1] = st->a[st->size_a - 1] ^ st->a[st->size_a - 2];
+		all->a[all->size_a - 1] = all->a[all->size_a - 1] ^ all->a[all->size_a - 2];
+		all->a[all->size_a - 2] = all->a[all->size_a - 1] ^ all->a[all->size_a - 2];
+		all->a[all->size_a - 1] = all->a[all->size_a - 1] ^ all->a[all->size_a - 2];
 		if (pr)
 			ft_putstr_fd("sa\n", 1);
 	}
 }
 
-void	ft_sb(t_stuff *st, int pr)
+void	ft_sb(t_stuff *all, int pr)
 {
-	if (st->size_b > 1)
+	if (all->size_b > 1)
 	{
-		st->b[st->size_b - 1] = st->b[st->size_b - 1] ^ st->b[st->size_b - 2];
-		st->b[st->size_b - 2] = st->b[st->size_b - 1] ^ st->b[st->size_b - 2];
-		st->b[st->size_b - 1] = st->b[st->size_b - 1] ^ st->b[st->size_b - 2];
+		all->b[all->size_b - 1] = all->b[all->size_b - 1] ^ all->b[all->size_b - 2];
+		all->b[all->size_b - 2] = all->b[all->size_b - 1] ^ all->b[all->size_b - 2];
+		all->b[all->size_b - 1] = all->b[all->size_b - 1] ^ all->b[all->size_b - 2];
 		if (pr)
 			ft_putstr_fd("sb\n", 1);
 	}
 }
 
-void	ft_ss(t_stuff *st)
+void	ft_ss(t_stuff *all)
 {
-	ft_sa(st, 0);
-	ft_sb(st, 0);
+	ft_sa(all, 0);
+	ft_sb(all, 0);
 	ft_putstr_fd("ss\n", 1);
 }
