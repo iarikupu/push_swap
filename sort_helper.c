@@ -102,5 +102,6 @@ void	temp_sort(t_stuff *all, t_sort *s, int n)
 	}
 	sorted(s);
 	s->sn = s->s[(all->size_a / n) - 1];
+	s->sn2 = s->s[(all->size_a / (2 *n))];
 	free(s->s);
 }

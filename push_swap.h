@@ -35,6 +35,7 @@ typedef struct s_sort {
 	int	*s;
 	int	n;
 	int	sn;
+	int	sn2;
 }				t_sort;
 
 void	sort_num(t_stuff *st, t_check *chk);

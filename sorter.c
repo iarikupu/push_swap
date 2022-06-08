@@ -87,14 +87,18 @@ void	sort_big(t_stuff *all)
 	n = 5;
 	s = (t_sort *)malloc(sizeof(t_sort));
 	if (all->size_a > 100)
-		n = 13;
+		n = 12;
 	while (--n)
 	{
 		temp_sort(all, s, n);
 		while (all->size_a)
 		{
 			if (all->a[all->size_a - 1] <= s->sn)
+			{
 				ft_pb(all);
+				if (all->b[all->size_b - 1] <= s->sn2)
+					ft_rb(all, 1);
+			}
 			else
 				best_move(all, closest_chunk(all, s), 1);
 			if (!in_chunk(all, s))
