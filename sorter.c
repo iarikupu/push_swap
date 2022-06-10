@@ -6,7 +6,7 @@
 /*   By: iarikupu <iarikupu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 15:30:22 by iarikupu          #+#    #+#             */
-/*   Updated: 2022/06/02 15:30:47 by iarikupu         ###   ########.fr       */
+/*   Updated: 2022/06/08 14:01:58 by iarikupu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,11 +94,7 @@ void	sort_big(t_stuff *all)
 		while (all->size_a)
 		{
 			if (all->a[all->size_a - 1] <= s->sn)
-			{
-				ft_pb(all);
-				if (all->b[all->size_b - 1] <= s->sn2)
-					ft_rb(all, 1);
-			}
+				sort_big_helper(all, s);
 			else
 				best_move(all, closest_chunk(all, s), 1);
 			if (!in_chunk(all, s))

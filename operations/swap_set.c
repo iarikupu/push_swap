@@ -14,11 +14,13 @@
 
 void	ft_sa(t_stuff *all, int pr)
 {
+	int	i;
+
 	if (all->size_a > 1)
 	{
-		all->a[all->size_a - 1] = all->a[all->size_a - 1] ^ all->a[all->size_a - 2];
-		all->a[all->size_a - 2] = all->a[all->size_a - 1] ^ all->a[all->size_a - 2];
-		all->a[all->size_a - 1] = all->a[all->size_a - 1] ^ all->a[all->size_a - 2];
+		i = all->a[all->size_a - 1];
+		all->a[all->size_a - 1] = all->a[all->size_a - 2];
+		all->a[all->size_a - 2] = i;
 		if (pr)
 			ft_putstr_fd("sa\n", 1);
 	}
@@ -26,11 +28,13 @@ void	ft_sa(t_stuff *all, int pr)
 
 void	ft_sb(t_stuff *all, int pr)
 {
+	int	i;
+
 	if (all->size_b > 1)
 	{
-		all->b[all->size_b - 1] = all->b[all->size_b - 1] ^ all->b[all->size_b - 2];
-		all->b[all->size_b - 2] = all->b[all->size_b - 1] ^ all->b[all->size_b - 2];
-		all->b[all->size_b - 1] = all->b[all->size_b - 1] ^ all->b[all->size_b - 2];
+		i = all->b[all->size_b - 1];
+		all->b[all->size_b - 1] = all->b[all->size_b - 2];
+		all->b[all->size_b - 2] = i;
 		if (pr)
 			ft_putstr_fd("sb\n", 1);
 	}

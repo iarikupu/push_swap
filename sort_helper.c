@@ -6,7 +6,7 @@
 /*   By: iarikupu <iarikupu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 15:29:23 by iarikupu          #+#    #+#             */
-/*   Updated: 2022/06/02 15:40:00 by iarikupu         ###   ########.fr       */
+/*   Updated: 2022/06/08 14:04:12 by iarikupu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,6 +102,6 @@ void	temp_sort(t_stuff *all, t_sort *s, int n)
 	}
 	sorted(s);
 	s->sn = s->s[(all->size_a / n) - 1];
-	s->sn2 = s->s[(all->size_a / (2 *n))];
+	s->sn2 = s->s[(all->size_a / (2 * n))];
 	free(s->s);
 }

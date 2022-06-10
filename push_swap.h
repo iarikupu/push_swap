@@ -6,7 +6,7 @@
 /*   By: iarikupu <iarikupu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 15:27:32 by iarikupu          #+#    #+#             */
-/*   Updated: 2022/06/02 15:28:37 by iarikupu         ###   ########.fr       */
+/*   Updated: 2022/06/08 15:04:00 by iarikupu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,6 +94,7 @@ int		closest_chunk(t_stuff *all, t_sort *sr);
 int		in_chunk(t_stuff *all, t_sort *sr);
 void	push_all_b(t_stuff *all);
 void	sorted(t_sort *s);
+void	sort_big_helper(t_stuff *all, t_sort *s);
 
 //Sorter
 void	sort_three(t_stuff *all);

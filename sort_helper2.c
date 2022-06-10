@@ -6,7 +6,7 @@
 /*   By: iarikupu <iarikupu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 15:29:47 by iarikupu          #+#    #+#             */
-/*   Updated: 2022/06/02 15:29:53 by iarikupu         ###   ########.fr       */
+/*   Updated: 2022/06/08 15:03:55 by iarikupu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,4 +66,11 @@ void	sorted(t_sort *s)
 		}
 		i++;
 	}
+}
+
+void	sort_big_helper(t_stuff *all, t_sort *s)
+{
+	ft_pb(all);
+	if (all->b[all->size_b - 1] <= s->sn2)
+		ft_rb(all, 1);
 }
