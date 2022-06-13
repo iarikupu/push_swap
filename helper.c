@@ -6,7 +6,7 @@
 /*   By: iarikupu <iarikupu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 15:24:10 by iarikupu          #+#    #+#             */
-/*   Updated: 2022/06/13 07:19:54 by iarikupu         ###   ########.fr       */
+/*   Updated: 2022/06/13 08:35:08 by iarikupu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ void	ft_exit(t_stuff *all, t_check *chk)
 		free(chk->joined);
 		while (chk->size > 0)
 			free(chk->splited[--chk->size]);
+		if (chk->splited)
+			free(chk->splited);
 		free(chk);
 	}
 	exit(0);
@@ -80,11 +82,11 @@ char	**ft_split(char *str)
 		while (*str && *str == ' ')
 			str++;
 		j = 0;
-		while (str[j] && str[i] != ' ')
+		while (str[j] && str[j] != ' ')
 			j++;
 		ret[i] = (char *)malloc(j + 1);
 		j = 0;
-		while (*str && *str != ' ')
+		while (*str && *(str) != ' ')
 			ret[i][j++] = *str++;
 		ret[i++][j] = 0;
 	}

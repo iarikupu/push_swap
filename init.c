@@ -6,7 +6,7 @@
 /*   By: iarikupu <iarikupu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 15:25:07 by iarikupu          #+#    #+#             */
-/*   Updated: 2022/06/02 15:25:26 by iarikupu         ###   ########.fr       */
+/*   Updated: 2022/06/13 08:18:05 by iarikupu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void	stuff_init(t_stuff *all)
 void	check_init(t_check *check)
 {
 	check->joined = (char *)malloc(1);
+	check->joined[0] = 0;
 	check->size = 0;
 	check->splited = NULL;
 }

@@ -6,7 +6,7 @@
 /*   By: iarikupu <iarikupu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 15:25:38 by iarikupu          #+#    #+#             */
-/*   Updated: 2022/06/13 07:32:03 by iarikupu         ###   ########.fr       */
+/*   Updated: 2022/06/13 08:08:58 by iarikupu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,12 +71,12 @@ int	main(int argc, char **argv)
 
 	if (argc < 2)
 		return (0);
-	chk = (t_check *)malloc(sizeof(t_check));
 	all = (t_stuff *)malloc(sizeof(t_stuff));
 	stuff_init(all);
 	i = 0;
 	while (++i < argc)
 		validate(argv[i], all);
+	chk = (t_check *)malloc(sizeof(t_check));
 	check_init(chk);
 	get_num(argc, argv, all, chk);
 	sort_num(all, chk);
