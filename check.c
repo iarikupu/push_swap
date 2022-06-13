@@ -6,7 +6,7 @@
 /*   By: iarikupu <iarikupu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 15:22:10 by iarikupu          #+#    #+#             */
-/*   Updated: 2022/06/02 15:22:35 by iarikupu         ###   ########.fr       */
+/*   Updated: 2022/06/13 07:30:58 by iarikupu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	check_args(const char *s, t_stuff *all)
 	int	i;
 
 	i = 0;
-	if (!s || !ft_strlen(s))
+	if (!s)
 		error_exit(all, NULL);
 	while (s[i])
 	{
@@ -46,7 +46,7 @@ int	check_args(const char *s, t_stuff *all)
 	while (s[i] && s[i] == ' ')
 		i++;
 	if (i == ft_strlen(s))
-		error_exit(all, NULL);
+		return (0);
 	return (1);
 }
 
@@ -56,7 +56,7 @@ void	validate(const char *str, t_stuff *all)
 
 	i = 0;
 	if (!check_args(str, all))
-		error_exit(all, NULL);
+		return ;
 	while (str[i])
 	{
 		while (str[i] && str[i] == ' ')

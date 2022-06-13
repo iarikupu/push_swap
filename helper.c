@@ -6,7 +6,7 @@
 /*   By: iarikupu <iarikupu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 15:24:10 by iarikupu          #+#    #+#             */
-/*   Updated: 2022/06/02 15:24:56 by iarikupu         ###   ########.fr       */
+/*   Updated: 2022/06/13 07:19:54 by iarikupu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	error_exit(t_stuff *all, t_check *chk)
 {
-	write(2, "Error\n", 7);
+	write(2, "Error\n", 6);
 	ft_exit(all, chk);
 }
 

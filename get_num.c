@@ -6,7 +6,7 @@
 /*   By: iarikupu <iarikupu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 15:22:42 by iarikupu          #+#    #+#             */
-/*   Updated: 2022/06/02 15:24:01 by iarikupu         ###   ########.fr       */
+/*   Updated: 2022/06/13 07:34:29 by iarikupu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ void	extr_num(t_stuff *all, t_check *chk)
 	i = 0;
 	j = 0;
 	chk->splited = ft_split(chk->joined);
+	if (! chk->splited[0])
+		ft_exit(all, chk);
 	while (chk->splited[i])
 	{
 		ps_atoi(chk->splited[i], chk, all);
